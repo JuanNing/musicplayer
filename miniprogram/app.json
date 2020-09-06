@@ -2,7 +2,8 @@
     "pages": [
         "pages/playlist/playlist",
         "pages/profile/profile",
-        "pages/blog/blog"
+        "pages/blog/blog",
+        "pages/musiclist/musiclist"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
