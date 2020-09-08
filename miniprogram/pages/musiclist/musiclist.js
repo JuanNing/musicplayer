@@ -33,11 +33,15 @@ Page({
                     name: pl.name,
                 }
             })
+            this._setMusiclist();
             wx.hideLoading();
         })
 
     },
 
+    _setMusiclist() {
+        wx.setStorageSync('musiclist', this.data.musiclist)
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -86,4 +90,6 @@ Page({
     onShareAppMessage: function() {
 
     }
+
+
 })
