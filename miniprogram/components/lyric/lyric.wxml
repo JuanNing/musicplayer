@@ -1,14 +1,16 @@
 <!--components/lyric/lyric.wxml-->
 <scroll-view isLyricShow="{{isLyricShow}}" class="lyric-scroll">
-    <view class="lyric-panel">
-        <!-- <block wx:for="{{lrcList}}" wx:key="item">
+    <view class="lyric1" >
+        暂无歌词
+    </view>
+</scroll-view>
+
+<!-- 替换 -->
+<!-- <view class="lyric-panel">
+        <block wx:for="{{lrcList}}" wx:key="item">
             <view class="lyric" >
                 {{item.lrc}}
             </view>
-        </block> -->
-         <view class="lyric1" >
-               暂无歌词
-            </view>
-    </view>
-</scroll-view>
+        </block>
+</view> -->
   

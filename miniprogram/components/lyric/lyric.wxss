@@ -25,6 +25,5 @@
 
 .lyric1 {
     min-height: 64rpx;
-    top: 50%;
-    position: relative;
+    margin-top: 60%;
 }
