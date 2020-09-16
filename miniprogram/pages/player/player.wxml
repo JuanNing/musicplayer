@@ -3,12 +3,19 @@
 <!-- 歌曲信息 -->
 <view class="player-info" >
   <!-- 歌曲封面等 -->
-  <view class="player-disc {{isPlaying?'play':''}}">
+  <view class="player-disc {{isPlaying?'play':''}}" hidden="{{isLyricShow}}"  
+   bind:tap="onChangeLyricShow">
     <image class="player-img rotation {{isPlaying?'':'rotation-paused'}}" src="{{picUrl}}" ></image>
   </view> 
 <!-- 进度条 -->
 <view class="progress-bar" >
-  <x-progress-bar></x-progress-bar>
+  <x-progress-bar bind:musicEnd='onNext'></x-progress-bar>
+</view>
+
+<!-- 歌词 -->
+<view class="" hidden="{{!isLyricShow}}">
+  <x-lyric   bind:tap="onChangeLyricShow" lyric="{{lyric}}">
+</x-lyric>
 </view>
 
 <!-- 控制面板 -->
@@ -17,7 +24,7 @@
     </text>
        <text class="iconfont {{isPlaying?'icon-zanting1':'icon-bofang1'}}" bind:tap="togglePlaying" >
     </text>
-      <text class="iconfont icon-xiayigexiayishou" bind:tap="noNext">
+      <text class="iconfont icon-xiayigexiayishou" bind:tap="onNext">
     </text>
 </view>
 
