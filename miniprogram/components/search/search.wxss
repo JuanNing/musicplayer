@@ -20,6 +20,16 @@
     flex: 1;
     background: #d81e06;
     color: #fff;
-    margin-left: 20rpx;
-    font-size: 24rpx;
+    /* margin-left: 20rpx; */
+    font-size: 28rpx;
+    border-radius: 30rpx;
+}
+.in-bar {
+    color:#999;
+}
+.find{
+    position: absolute;
+    top:50%;
+    transform: translate(16rpx,-50%);
+    color:#9f9f9f;
 }
