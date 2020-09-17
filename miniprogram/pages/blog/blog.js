@@ -5,11 +5,35 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        //控制底部弹出层是否显示
+        modalShow:false
     },
     //发布功能
     onPublish() {
-
+        //需要判断用户是否授权过
+        wx.getSetting({
+            success: (result)=>{
+                // console.log(result)
+                if(result.authSetting['scope.userInfo']){
+                    wx.getUserInfo({
+                        success: (result)=>{
+                            console.log(result)
+                        },
+                        fail: ()=>{},
+                        complete: ()=>{}
+                    });
+                }else{
+                    this.setData({
+                        modalShow:true
+                    })
+                }
+            },
+            fail: ()=>{},
+            complete: ()=>{}
+        });
+        this.setData({
+            modalShow:true
+        })
     },
     /**
      * 生命周期函数--监听页面加载
