@@ -7,6 +7,7 @@ Page({
     data: {
 
     },
+    //发布功能
     onPublish() {
 
     },
