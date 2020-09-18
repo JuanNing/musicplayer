@@ -1,7 +1,7 @@
 <view class="modal" hidden="{{!modalShow}}">
     <view class="panel">
         <!-- 删除的字体图标 -->
-        <i class="iconfonst " bind:tap="onClose"></i>
+        <i class="iconfont icon-shanchu" bind:tap="onClose"></i>
         <!-- slot插槽 页面调用组件的时候使用 -->
         <!-- 有多个插槽的时候 要使用具名插槽 -->
         <slot name="modal-content"></slot>
