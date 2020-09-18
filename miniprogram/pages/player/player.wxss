@@ -83,12 +83,12 @@
     font-size: 80rpx;
 }
 
-.icon-zanting1 {
+.icon-zanting {
     font-size: 120rpx;
     margin: 0 50rpx;
 }
 
-.icon-bofang1 {
+.icon-bofang {
     font-size: 120rpx;
     margin: 0 50rpx;
 }

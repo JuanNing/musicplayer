@@ -15,6 +15,20 @@ App({
             })
         }
 
-        this.globalData = {}
+        this.globalData = {
+                openid: -1,
+            },
+            this.getOpenid()
+    },
+    getOpenid() {
+        wx.cloud.callFunction({
+            name: 'login'
+        }).then((res) => {
+            const openid = res.result.openid
+            this.globalData.openid = openid
+            if (wx.getStorageSync(openid) == '') {
+                wx.setStorageSync(openid, [])
+            }
+        })
     }
 })
