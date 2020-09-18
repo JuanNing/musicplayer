@@ -9,15 +9,7 @@
         </view>
     </view>
     <!-- 底部弹出层 -->
-    <x-bottom-modal modalShow="{{modalShow}}">
-        <view slot="slot2">
-            <view>插槽</view>
-            <button>按钮</button>
-        </view>
-
-        <view slot="slot1">
-            <view>插槽1</view>
-            <button>按钮1</button>
-        </view>
-    </x-bottom-modal>
+    <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+        
+    </x-login>
 </view>
