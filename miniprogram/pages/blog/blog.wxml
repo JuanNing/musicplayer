@@ -1,12 +1,15 @@
-<!--pages/blog/blog.wxml-->
+<!-- pages/blog/blog.wxml -->
 <view class="container">
     <view class="header">
         <view class="publish-container">
-                <i class='iconfont icon-fabu' bind:tap="onPublish"></i>
+            <i class='iconfont icon-fabu' bind:tap="onPublish"></i>
         </view>
         <view class="search-container">
-        <x-search iconfont="iconfont" icon-sousuo="icon-sousuo"></x-search>
+            <x-search iconfont="iconfont" icon-sousuo="icon-sousuo"></x-search>
         </view>
     </view>
-    
+    <!-- 底部弹出层 -->
+    <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+        
+    </x-login>
 </view>

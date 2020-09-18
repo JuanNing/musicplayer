@@ -9,6 +9,8 @@ Component({
       value:'请输入'
     }
   },
+  // page中引用组件的时候传入class名称
+  //todo 传递进来的样式 在组件中是不能修改的
   externalClasses:[
     'iconfont',
     'icon-sousuo'
